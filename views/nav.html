@@ -1,4 +1,4 @@
-<nav class="navbar navbar-info" ng-controller="NavController">
+<nav class="navbar navbar-info">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -10,7 +10,6 @@
       <a class="navbar-brand" href="#/">TaskNinja</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">      
       
       <ul class="nav navbar-nav navbar-left">
@@ -36,4 +35,6 @@
 
     </div>
   </div>
+
+  <div ng-include="'views/partials/changepass.html'"></div>
 </nav>
