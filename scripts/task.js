@@ -2,9 +2,12 @@
 
 app.controller('TaskController', function($scope, FURL, $firebase, $location) {
 	var ref = new Firebase(FURL);
-	var fbTask = $firebase(ref.child('task')).$asArray();
+	var fbTasks = $firebase(ref.child('task')).$asArray();
+
+	$scope.tasks = fbTasks;
+
 	$scope.postTask = function(task) {
-		fbTask.$add(task);
+		fbTasks.$add(task);
 		$location.path('/browse');
 	};
 });
